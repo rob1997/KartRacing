@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fabb64d4-ab68-41f7-aadb-8784fa1cb52c" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Motor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+              <folding>
+                <marker date="1609850587704" expanded="true" signature="6:111" ph="..." />
+                <marker date="1609850587704" expanded="true" signature="147:4076" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="199:537" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="253:337" ph="/* wheel mesh/separate transform from wheel collider ... */" />
+                <marker date="1609850587704" expanded="true" signature="1000:1098" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="1130:1219" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="1295:2337" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="1463:2329" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="1491:1676" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="1694:1886" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="1930:2091" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="2343:2495" ph="/// anti-roll function that stops car from rolling ... " />
+                <marker date="1609850587704" expanded="true" signature="2531:4074" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="3018:3206" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="3321:3513" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="3620:3824" ph="{...}" />
+                <marker date="1609850587704" expanded="true" signature="3862:4068" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Driver.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              <folding>
+                <marker date="1609850998866" expanded="true" signature="6:123" ph="..." />
+                <marker date="1609850998866" expanded="true" signature="160:948" ph="{...}" />
+                <marker date="1609850998866" expanded="true" signature="309:392" ph="{...}" />
+                <marker date="1609850998866" expanded="true" signature="418:660" ph="{...}" />
+                <marker date="1609850998866" expanded="true" signature="687:946" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04A8B067-FA83-4FF2-8ADE-3853D880531C/cb/bef0a044/WheelCollider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Driver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Motor.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Motor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Driver.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fabb64d4-ab68-41f7-aadb-8784fa1cb52c" name="Default Changelist" comment="" />
+      <created>1609249052862</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609249052862</updated>
+      <workItem from="1609249054388" duration="18100000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="18100000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18309858" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" order="0" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" order="2" />
+      <window_info anchor="bottom" id="Unit Tests" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" visible="true" weight="0.32916668" />
+      <window_info anchor="bottom" id="Performance Profiler" order="6" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="bottom" id="Run" order="9" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="right" id="Errors In Solution" order="0" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="1" weight="0.32997987" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info active="true" anchor="right" id="Version Control" order="5" visible="true" weight="0.32997987" />
+    </layout>
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Car.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04A8B067-FA83-4FF2-8ADE-3853D880531C/cb/bef0a044/WheelCollider.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Motor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+          <folding>
+            <marker date="1609850587704" expanded="true" signature="6:111" ph="..." />
+            <marker date="1609850587704" expanded="true" signature="147:4076" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="199:537" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="253:337" ph="/* wheel mesh/separate transform from wheel collider ... */" />
+            <marker date="1609850587704" expanded="true" signature="1000:1098" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="1130:1219" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="1295:2337" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="1463:2329" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="1491:1676" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="1694:1886" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="1930:2091" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="2343:2495" ph="/// anti-roll function that stops car from rolling ... " />
+            <marker date="1609850587704" expanded="true" signature="2531:4074" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="3018:3206" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="3321:3513" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="3620:3824" ph="{...}" />
+            <marker date="1609850587704" expanded="true" signature="3862:4068" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Driver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <marker date="1609850998866" expanded="true" signature="6:123" ph="..." />
+            <marker date="1609850998866" expanded="true" signature="160:948" ph="{...}" />
+            <marker date="1609850998866" expanded="true" signature="309:392" ph="{...}" />
+            <marker date="1609850998866" expanded="true" signature="418:660" ph="{...}" />
+            <marker date="1609850998866" expanded="true" signature="687:946" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

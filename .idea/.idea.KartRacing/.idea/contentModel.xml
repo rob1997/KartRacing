@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Robel\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Robel\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_KartRacing.693925378.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Robel\Documents\Unity\Projects\KartRacing" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Driver.cs" t="Include" />
+          <e p="Input" t="Include">
+            <e p="InputMaster.cs" t="Include" />
+          </e>
+          <e p="Motor.cs" t="Include" />
+        </e>
+      </e>
+      <e p="KartRacing.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
