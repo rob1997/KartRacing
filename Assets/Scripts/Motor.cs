@@ -47,29 +47,19 @@ public class Motor : MonoBehaviour
         GroundWheels(false);
     }
 
-    public void Drive(float acceleration, float direction, bool isBraking)
+    public void Drive(float acceleration, float direction, float brake)
     {
         acceleration = Mathf.Clamp(acceleration, -1f, 1f);
         direction = Mathf.Clamp(direction, -1f, 1f);
+        brake = Mathf.Clamp(brake, 0f, 1f);
         
         wheels.ForEach(wheel =>
         {
-            if (isBraking)
-            {
-                wheel.collider.motorTorque = 0;
-
-                //apply brake
-                wheel.collider.brakeTorque = maxBrakeTorque;
-                
-            }
-
-            else
-            {
-                wheel.collider.brakeTorque = 0;
-                
-                //apply torque
-                wheel.collider.motorTorque = acceleration * torque;
-            }
+            //apply torque
+            wheel.collider.motorTorque = acceleration * torque;
+            
+            //apply brake
+            wheel.collider.brakeTorque = brake * maxBrakeTorque;
             
             if (wheel.isFront)
             {

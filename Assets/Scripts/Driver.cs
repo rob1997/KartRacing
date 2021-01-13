@@ -10,7 +10,7 @@ public class Driver : MonoBehaviour
     
     [HideInInspector] public InputMaster inputMaster;
 
-    private bool _isBraking = false;
+    private float _brake = 0f;
 
     private void Awake()
     {
@@ -20,8 +20,8 @@ public class Driver : MonoBehaviour
 
     private void Start()
     {
-        inputMaster.Player.Brake.started += delegate(InputAction.CallbackContext context) { _isBraking = true; };
-        inputMaster.Player.Brake.canceled += delegate(InputAction.CallbackContext context) { _isBraking = false; };
+        inputMaster.Player.Brake.started += delegate { _brake = 1f; };
+        inputMaster.Player.Brake.canceled += delegate { _brake = 0f; };
     }
 
     private void Update()
@@ -32,6 +32,6 @@ public class Driver : MonoBehaviour
         float acceleration = moveVector.y;
         float direction = moveVector.x;
 
-        motor.Drive(acceleration, direction, _isBraking);
+        motor.Drive(acceleration, direction, _brake);
     }
 }
