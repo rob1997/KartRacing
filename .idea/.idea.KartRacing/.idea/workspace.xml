@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fabb64d4-ab68-41f7-aadb-8784fa1cb52c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KartRacing/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KartRacing/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KartRacing/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KartRacing/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KartRacing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KartRacing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Track1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Track1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Driver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Driver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Motor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Motor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AiModels/kart.nn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AiModels/kart.nn.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Game_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Game_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Training_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Training_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AiDriver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AiDriver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Circuit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Circuit.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +23,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Motor.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
+            <state relative-caret-position="-64">
               <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
               <folding>
                 <marker date="1610203563958" expanded="false" signature="6:111" ph="..." />
@@ -72,20 +65,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AiDriver.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="102" column="8" lean-forward="true" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
+            <state relative-caret-position="8">
+              <caret line="141" column="47" selection-start-line="141" selection-start-column="47" selection-end-line="141" selection-end-column="47" />
               <folding>
-                <marker date="1610496687346" expanded="true" signature="6:210" ph="..." />
-                <marker date="1610496687346" expanded="true" signature="241:4343" ph="{...}" />
-                <marker date="1610496687346" expanded="true" signature="435:501" ph="/* private string _vehicle = &quot;Vehicle&quot;; ... */" />
-                <marker date="1610496687346" expanded="true" signature="773:1145" ph="{...}" />
-                <marker date="1610496687346" expanded="true" signature="1188:1575" ph="{...}" />
-                <marker date="1610496687346" expanded="true" signature="1581:1998" ph="/// Called when an action is received from player input or the neural network ... " />
-                <marker date="1610496687346" expanded="true" signature="2062:2147" ph="{...}" />
-                <marker date="1610496687346" expanded="true" signature="2214:4210" ph="{...}" />
-                <marker date="1610496687346" expanded="true" signature="2591:2799" ph="{...}" />
-                <marker date="1610496687346" expanded="true" signature="3494:3665" ph="/* add reward if vehicle is facing checkpoint by an angle less than 90 degrees and punish if more ... */" />
-                <marker date="1610496687346" expanded="true" signature="4262:4341" ph="{...}" />
+                <marker date="1610586118610" expanded="true" signature="6:229" ph="..." />
+                <marker date="1610586118610" expanded="true" signature="260:4774" ph="{...}" />
+                <marker date="1610586118610" expanded="true" signature="454:520" ph="/* private string _vehicle = &quot;Vehicle&quot;; ... */" />
+                <marker date="1610586118610" expanded="true" signature="792:949" ph="{...}" />
+                <marker date="1610586118610" expanded="true" signature="992:1532" ph="{...}" />
+                <marker date="1610586118610" expanded="true" signature="1559:1678" ph="{...}" />
+                <marker date="1610586118610" expanded="true" signature="1684:2101" ph="/// Called when an action is received from player input or the neural network ... " />
+                <marker date="1610586118610" expanded="true" signature="2165:2250" ph="{...}" />
+                <marker date="1610586118610" expanded="true" signature="2317:4370" ph="{...}" />
+                <marker date="1610586118610" expanded="true" signature="2517:2959" ph="{...}" />
+                <marker date="1610586118610" expanded="true" signature="3654:3825" ph="/* add reward if vehicle is facing checkpoint by an angle less than 90 degrees and punish if more ... */" />
+                <marker date="1610586118610" expanded="true" signature="4409:4637" ph="{...}" />
+                <marker date="1610586118610" expanded="true" signature="4693:4772" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -94,16 +89,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Circuit.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+            <state relative-caret-position="64">
+              <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
               <folding>
-                <marker date="1610482236600" expanded="false" signature="6:92" ph="..." />
-                <marker date="1610482236600" expanded="true" signature="130:936" ph="{...}" />
-                <marker date="1610482236600" expanded="true" signature="287:326" ph="{...}" />
-                <marker date="1610482236600" expanded="true" signature="367:405" ph="{...}" />
-                <marker date="1610482236600" expanded="true" signature="441:934" ph="{...}" />
-                <marker date="1610482236600" expanded="true" signature="512:928" ph="{...}" />
-                <marker date="1610482236600" expanded="true" signature="641:833" ph="{...}" />
+                <marker date="1610573214255" expanded="false" signature="6:92" ph="..." />
+                <marker date="1610573214255" expanded="true" signature="130:876" ph="{...}" />
+                <marker date="1610573214255" expanded="true" signature="227:266" ph="{...}" />
+                <marker date="1610573214255" expanded="true" signature="307:345" ph="{...}" />
+                <marker date="1610573214255" expanded="true" signature="381:874" ph="{...}" />
+                <marker date="1610573214255" expanded="true" signature="452:868" ph="{...}" />
+                <marker date="1610573214255" expanded="true" signature="581:773" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -133,8 +128,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04A8B067-FA83-4FF2-8ADE-3853D880531C/cb/bef0a044/WheelCollider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Driver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2FEAF16E-8000-4E0C-ADAE-3F2E05F2A3FA/ee/569ba9bb/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AiDriver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Circuit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EBEB27C-A6DF-45BB-AEEC-500DC98FF733/47/a2ceab45/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Motor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp1_DriveEffectsFinal.cs.zip/Drive.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -229,12 +226,12 @@
       <workItem from="1609249054388" duration="23429000" />
       <workItem from="1610107737342" duration="37331000" />
       <workItem from="1610382478809" duration="9893000" />
-      <workItem from="1610493928479" duration="2012000" />
+      <workItem from="1610493928479" duration="9423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72665000" />
+    <option name="totallyTimeSpent" value="80076000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -247,7 +244,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09389672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -331,9 +327,60 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Road.cs" />
+    <entry file="file://$PROJECT_DIR$/../../../ML/2.0/trainer_config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2FEAF16E-8000-4E0C-ADAE-3F2E05F2A3FA/ee/569ba9bb/Debug.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Circuit.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+          <folding>
+            <marker date="1610573214255" expanded="false" signature="6:92" ph="..." />
+            <marker date="1610573214255" expanded="true" signature="130:876" ph="{...}" />
+            <marker date="1610573214255" expanded="true" signature="227:266" ph="{...}" />
+            <marker date="1610573214255" expanded="true" signature="307:345" ph="{...}" />
+            <marker date="1610573214255" expanded="true" signature="381:874" ph="{...}" />
+            <marker date="1610573214255" expanded="true" signature="452:868" ph="{...}" />
+            <marker date="1610573214255" expanded="true" signature="581:773" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EBEB27C-A6DF-45BB-AEEC-500DC98FF733/47/a2ceab45/Enumerable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="678" column="46" selection-start-line="678" selection-start-column="46" selection-end-line="678" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Driver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <marker date="1610234483578" expanded="false" signature="6:123" ph="..." />
+            <marker date="1610234483578" expanded="true" signature="160:851" ph="{...}" />
+            <marker date="1610234483578" expanded="true" signature="303:386" ph="{...}" />
+            <marker date="1610234483578" expanded="true" signature="412:567" ph="{...}" />
+            <marker date="1610234483578" expanded="true" signature="594:849" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Motor.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
+        <state relative-caret-position="-64">
           <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
           <folding>
             <marker date="1610203563958" expanded="false" signature="6:111" ph="..." />
@@ -355,59 +402,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Driver.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <marker date="1610234483578" expanded="false" signature="6:123" ph="..." />
-            <marker date="1610234483578" expanded="true" signature="160:851" ph="{...}" />
-            <marker date="1610234483578" expanded="true" signature="303:386" ph="{...}" />
-            <marker date="1610234483578" expanded="true" signature="412:567" ph="{...}" />
-            <marker date="1610234483578" expanded="true" signature="594:849" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Circuit.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-          <folding>
-            <marker date="1610482236600" expanded="false" signature="6:92" ph="..." />
-            <marker date="1610482236600" expanded="true" signature="130:936" ph="{...}" />
-            <marker date="1610482236600" expanded="true" signature="287:326" ph="{...}" />
-            <marker date="1610482236600" expanded="true" signature="367:405" ph="{...}" />
-            <marker date="1610482236600" expanded="true" signature="441:934" ph="{...}" />
-            <marker date="1610482236600" expanded="true" signature="512:928" ph="{...}" />
-            <marker date="1610482236600" expanded="true" signature="641:833" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../ML/2.0/trainer_config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/AiDriver.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="102" column="8" lean-forward="true" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
+        <state relative-caret-position="8">
+          <caret line="141" column="47" selection-start-line="141" selection-start-column="47" selection-end-line="141" selection-end-column="47" />
           <folding>
-            <marker date="1610496687346" expanded="true" signature="6:210" ph="..." />
-            <marker date="1610496687346" expanded="true" signature="241:4343" ph="{...}" />
-            <marker date="1610496687346" expanded="true" signature="435:501" ph="/* private string _vehicle = &quot;Vehicle&quot;; ... */" />
-            <marker date="1610496687346" expanded="true" signature="773:1145" ph="{...}" />
-            <marker date="1610496687346" expanded="true" signature="1188:1575" ph="{...}" />
-            <marker date="1610496687346" expanded="true" signature="1581:1998" ph="/// Called when an action is received from player input or the neural network ... " />
-            <marker date="1610496687346" expanded="true" signature="2062:2147" ph="{...}" />
-            <marker date="1610496687346" expanded="true" signature="2214:4210" ph="{...}" />
-            <marker date="1610496687346" expanded="true" signature="2591:2799" ph="{...}" />
-            <marker date="1610496687346" expanded="true" signature="3494:3665" ph="/* add reward if vehicle is facing checkpoint by an angle less than 90 degrees and punish if more ... */" />
-            <marker date="1610496687346" expanded="true" signature="4262:4341" ph="{...}" />
+            <marker date="1610586118610" expanded="true" signature="6:229" ph="..." />
+            <marker date="1610586118610" expanded="true" signature="260:4774" ph="{...}" />
+            <marker date="1610586118610" expanded="true" signature="454:520" ph="/* private string _vehicle = &quot;Vehicle&quot;; ... */" />
+            <marker date="1610586118610" expanded="true" signature="792:949" ph="{...}" />
+            <marker date="1610586118610" expanded="true" signature="992:1532" ph="{...}" />
+            <marker date="1610586118610" expanded="true" signature="1559:1678" ph="{...}" />
+            <marker date="1610586118610" expanded="true" signature="1684:2101" ph="/// Called when an action is received from player input or the neural network ... " />
+            <marker date="1610586118610" expanded="true" signature="2165:2250" ph="{...}" />
+            <marker date="1610586118610" expanded="true" signature="2317:4370" ph="{...}" />
+            <marker date="1610586118610" expanded="true" signature="2517:2959" ph="{...}" />
+            <marker date="1610586118610" expanded="true" signature="3654:3825" ph="/* add reward if vehicle is facing checkpoint by an angle less than 90 degrees and punish if more ... */" />
+            <marker date="1610586118610" expanded="true" signature="4409:4637" ph="{...}" />
+            <marker date="1610586118610" expanded="true" signature="4693:4772" ph="{...}" />
           </folding>
         </state>
       </provider>

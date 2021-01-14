@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
@@ -35,13 +36,7 @@ public class AiDriver : Agent
 
         _target = circuit.waypoints[_index].position;
 
-        Vector3 targetXZ = _target;
-        targetXZ.y = 0; //disregard y axis
-
-        Vector3 positionXZ = _motor.rBody.transform.position;
-        positionXZ.y = 0; //disregard y axis
-        
-        _previousDistance = Vector3.Distance(targetXZ, positionXZ);
+        _previousDistance = CalculateDistance();
     }
 
     public override void OnEpisodeBegin()
@@ -49,12 +44,23 @@ public class AiDriver : Agent
         _motor.rBody.velocity = Vector3.zero;
         _motor.rBody.angularVelocity = Vector3.zero;
 
+        _index = Random.Range(0, circuit.waypoints.Count - 1);
+        
         //get random entry
-        Transform entry = circuit.entries[Random.Range(0, circuit.entries.Count - 1)];
+        Transform entry = circuit.waypoints[_index];
         
         //spawn vehicle in random road location
         _motor.transform.position = entry.position;
         _motor.transform.rotation = entry.rotation;
+
+        _target = circuit.waypoints[++_index].position;
+        
+        _previousDistance = CalculateDistance();
+    }
+
+    private void Update()
+    {
+        Debug.DrawLine(_target + Vector3.up * .5f, _motor.rBody.position + Vector3.up * .5f, Color.green);
     }
 
     /// <summary>
@@ -72,14 +78,8 @@ public class AiDriver : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        Vector3 targetXZ = _target;
-        targetXZ.y = 0;
-
-        Vector3 positionXZ = _motor.rBody.transform.position;
-        positionXZ.y = 0;
-        
         //calculate distance in previous frame
-        _currentDistance = Vector3.Distance(targetXZ, positionXZ);
+        _currentDistance = CalculateDistance();
         
         if (_currentDistance < 2f) //2 is a threshold before changing to next checkpoints
         {
@@ -88,6 +88,12 @@ public class AiDriver : Agent
             if (_index >= circuit.waypoints.Count) _index = 0; //if lap complete reset _index
 
             _target = circuit.waypoints[_index].position;
+            
+            //recalculate _currentDistance
+            float distance = CalculateDistance();
+
+            _previousDistance = distance + (_previousDistance - _currentDistance);
+            _currentDistance = distance;   
         }
         
         //position if _target with respect to vehicle (localized)
@@ -128,6 +134,17 @@ public class AiDriver : Agent
         sensor.AddObservation(transform.localRotation.normalized);
     }
 
+    private float CalculateDistance()
+    {
+        Vector3 targetXZ = _target;
+        targetXZ.y = 0;
+
+        Vector3 positionXZ = _motor.rBody.transform.position;
+        positionXZ.y = 0;
+        
+        return Vector3.Distance(targetXZ, positionXZ);   
+    }
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider.CompareTag(_boundary)) AddReward(-.5f);

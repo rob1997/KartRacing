@@ -6,7 +6,6 @@ using UnityEngine;
 public class Circuit : MonoBehaviour
 {
     public List<Transform> waypoints = new List<Transform>();
-    public List<Transform> entries = new List<Transform>();
 
     private void OnDrawGizmos()
     {
