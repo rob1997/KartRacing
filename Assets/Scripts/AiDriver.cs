@@ -83,6 +83,9 @@ public class AiDriver : Agent
         
         if (_currentDistance < 2f) //2 is a threshold before changing to next checkpoints
         {
+            AddReward(Vector3.Distance(circuit.waypoints[_index].position, 
+                circuit.waypoints[_index - 1 < 0 ? circuit.waypoints.Count - 1 : _index - 1].position));
+            
             _index++;
             
             if (_index >= circuit.waypoints.Count) _index = 0; //if lap complete reset _index
@@ -91,9 +94,9 @@ public class AiDriver : Agent
             
             //recalculate _currentDistance
             float distance = CalculateDistance();
-
+            
             _previousDistance = distance + (_previousDistance - _currentDistance);
-            _currentDistance = distance;   
+            _currentDistance = distance;
         }
         
         //position if _target with respect to vehicle (localized)
