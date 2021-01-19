@@ -29,7 +29,20 @@ public class AiDriver : Agent
     private float _previousDistance;
     //distance to target in current frame
     private float _currentDistance;
+
+    private InputMaster _inputMaster;
+
+    private float _brake;
     
+    private void Awake()
+    {
+        _inputMaster = new InputMaster();
+        _inputMaster.Enable();
+        
+        _inputMaster.Player.Brake.started += delegate { _brake = 1f; };
+        _inputMaster.Player.Brake.canceled += delegate { _brake = 0f; };
+    }
+
     public override void Initialize()
     {
         _motor = GetComponent<Motor>();
@@ -76,25 +89,23 @@ public class AiDriver : Agent
         _motor.Drive(vectorAction[0], vectorAction[1], vectorAction[2]);
     }
 
+    public override void Heuristic(float[] actionsOut)
+    {
+        Vector2 moveVector = _inputMaster.Player.Move.ReadValue<Vector2>();
+        
+        //get inputs
+        float acceleration = moveVector.y;
+        float direction = moveVector.x;
+
+        actionsOut[0] = acceleration;
+        actionsOut[1] = direction;
+        actionsOut[2] = _brake;
+    }
+
     public override void CollectObservations(VectorSensor sensor)
     {
         //calculate distance in previous frame
         _currentDistance = CalculateDistance();
-        
-        if (_currentDistance < 2f) //2 is a threshold before changing to next checkpoints
-        {
-            _index++;
-            
-            if (_index >= circuit.waypoints.Count) _index = 0; //if lap complete reset _index
-
-            _target = circuit.waypoints[_index].position;
-            
-            //recalculate _currentDistance
-            float distance = CalculateDistance();
-
-            _previousDistance = distance + (_previousDistance - _currentDistance);
-            _currentDistance = distance;   
-        }
         
         //position if _target with respect to vehicle (localized)
         Vector3 localTarget = _motor.rBody.transform.InverseTransformPoint(_target);
@@ -113,15 +124,9 @@ public class AiDriver : Agent
         //angle between forward of checkpoint and forward of vehicle
         float angle = Vector3.Angle(_motor.rBody.transform.forward, circuit.waypoints[_index].forward);
         
-        //add reward if vehicle is facing checkpoint by an angle less than 90 degrees and punish if more
-//        AddReward(1f - Mathf.Abs(angle) / 90f);
-
         //1 Observation
         sensor.AddObservation(angle);
         
-        //1 Observation
-        sensor.AddObservation(Mathf.Sign(_motor.rBody.velocity.magnitude)); //is going forward/backward
-
         Vector3 localVelocity = transform.InverseTransformDirection(_motor.rBody.velocity);
         
         //1 observation
@@ -148,5 +153,23 @@ public class AiDriver : Agent
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider.CompareTag(_boundary)) AddReward(-.5f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (circuit.waypoints[_index].name != other.name) return;
+        
+        _index++;
+            
+        if (_index >= circuit.waypoints.Count) _index = 0; //if lap complete reset _index
+
+        _target = circuit.waypoints[_index].position;
+            
+        //recalculate _currentDistance
+        float distance = CalculateDistance();
+
+        _previousDistance = distance + (_previousDistance - _currentDistance);
+        
+        _currentDistance = distance;
     }
 }

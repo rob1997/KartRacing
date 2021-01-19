@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 12
+    VectorObservationSize: 11
     NumStackedVectorObservations: 1
     VectorActionSize: 03000000
     VectorActionDescriptions: []
@@ -210,8 +210,6 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 5000
   circuit: {fileID: 0}
-  target: {x: 0, y: 0, z: 0}
-  waypointIndex: 0
 --- !u!114 &3342870850024141996
 MonoBehaviour:
   m_ObjectHideFlags: 0
