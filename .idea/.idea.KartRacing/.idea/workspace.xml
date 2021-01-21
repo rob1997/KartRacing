@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="fabb64d4-ab68-41f7-aadb-8784fa1cb52c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KartRacing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KartRacing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Game_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Game_timers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Training_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Training_timers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Roads/Jeep.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Roads/Jeep.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Roads/LRoad_L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Roads/LRoad_L.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Roads/LRoad_R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Roads/LRoad_R.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Roads/URoad_L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Roads/URoad_L.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Roads/URoad_R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Roads/URoad_R.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Training.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Training.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AiDriver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AiDriver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Circuit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Circuit.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Driver.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
+            <state relative-caret-position="208">
               <caret line="23" column="71" selection-start-line="22" selection-start-column="8" selection-end-line="23" selection-end-column="71" />
               <folding>
                 <marker date="1610234483578" expanded="false" signature="6:123" ph="..." />
@@ -61,23 +68,27 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AiDriver.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
+            <state relative-caret-position="149">
+              <caret line="79" column="52" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
               <folding>
-                <marker date="1611001151438" expanded="true" signature="6:229" ph="..." />
-                <marker date="1611001151438" expanded="true" signature="260:5178" ph="{...}" />
-                <marker date="1611001151438" expanded="true" signature="454:520" ph="/* private string _vehicle = &quot;Vehicle&quot;; ... */" />
-                <marker date="1611001151438" expanded="true" signature="845:1084" ph="{...}" />
-                <marker date="1611001151438" expanded="true" signature="1123:1280" ph="{...}" />
-                <marker date="1611001151438" expanded="true" signature="1323:1863" ph="{...}" />
-                <marker date="1611001151438" expanded="true" signature="1890:2009" ph="{...}" />
-                <marker date="1611001151438" expanded="true" signature="2015:2432" ph="/// Called when an action is received from player input or the neural network ... " />
-                <marker date="1611001151438" expanded="true" signature="2496:2581" ph="{...}" />
-                <marker date="1611001151438" expanded="true" signature="2637:2944" ph="{...}" />
-                <marker date="1611001151438" expanded="true" signature="3011:4238" ph="{...}" />
-                <marker date="1611001151438" expanded="true" signature="4277:4505" ph="{...}" />
-                <marker date="1611001151438" expanded="true" signature="4561:4640" ph="{...}" />
-                <marker date="1611001151438" expanded="true" signature="4689:5176" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="6:229" ph="..." />
+                <marker date="1611187222503" expanded="true" signature="260:7192" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="454:520" ph="/* private string _vehicle = &quot;Vehicle&quot;; ... */" />
+                <marker date="1611187222503" expanded="true" signature="1136:1375" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="1414:1660" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="1703:2296" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="2324:2627" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="2395:2621" ph="/* if (circuit.indexes.Contains(_index)) FindRandomIndex(); ... */" />
+                <marker date="1611187222503" expanded="true" signature="2654:2773" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="2779:3196" ph="/// Called when an action is received from player input or the neural network ... " />
+                <marker date="1611187222503" expanded="true" signature="3260:3345" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="3401:3708" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="3775:5683" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="4484:5166" ph="/* if (increment &gt; 0) //moving forward ... */" />
+                <marker date="1611187222503" expanded="true" signature="5722:5950" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="5990:6282" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="6338:6417" ph="{...}" />
+                <marker date="1611187222503" expanded="true" signature="6466:7190" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -86,16 +97,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Circuit.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="67">
+              <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
               <folding>
-                <marker date="1610573214255" expanded="false" signature="6:92" ph="..." />
-                <marker date="1610573214255" expanded="true" signature="130:876" ph="{...}" />
-                <marker date="1610573214255" expanded="true" signature="227:266" ph="{...}" />
-                <marker date="1610573214255" expanded="true" signature="307:345" ph="{...}" />
-                <marker date="1610573214255" expanded="true" signature="381:874" ph="{...}" />
-                <marker date="1610573214255" expanded="true" signature="452:868" ph="{...}" />
-                <marker date="1610573214255" expanded="true" signature="581:773" ph="{...}" />
+                <marker date="1611173055754" expanded="false" signature="6:92" ph="..." />
+                <marker date="1611173055754" expanded="true" signature="130:943" ph="{...}" />
+                <marker date="1611173055754" expanded="true" signature="294:333" ph="{...}" />
+                <marker date="1611173055754" expanded="true" signature="374:412" ph="{...}" />
+                <marker date="1611173055754" expanded="false" signature="448:941" ph="{...}" />
+                <marker date="1611173055754" expanded="true" signature="519:935" ph="{...}" />
+                <marker date="1611173055754" expanded="true" signature="648:840" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -104,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../ML/2.0/trainer_config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="403">
+              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -119,6 +130,7 @@
       <find>gearLength</find>
       <find>_index++</find>
       <find>addrewa</find>
+      <find>addreward</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,9 +153,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Motor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Driver.cs" />
         <option value="$PROJECT_DIR$/../../../ML/1.0/trainer_config.yaml" />
-        <option value="$PROJECT_DIR$/../../../ML/2.0/trainer_config.yaml" />
+        <option value="$PROJECT_DIR$/../Terrain-Runner/Packages/manifest.json" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Road.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Circuit.cs" />
+        <option value="$PROJECT_DIR$/../../../ML/2.0/trainer_config.yaml" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AiDriver.cs" />
       </list>
     </option>
@@ -226,12 +239,12 @@
       <workItem from="1610107737342" duration="37331000" />
       <workItem from="1610382478809" duration="9893000" />
       <workItem from="1610493928479" duration="9423000" />
-      <workItem from="1610972486096" duration="4335000" />
+      <workItem from="1610972486096" duration="30289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88590000" />
+    <option name="totallyTimeSpent" value="114544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -249,12 +262,13 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09792086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="NuGet" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="2" />
       <window_info anchor="bottom" id="Unit Tests" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="5" side_tool="true" visible="true" weight="0.32916668" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" visible="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Performance Profiler" order="6" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
@@ -268,7 +282,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="right" id="Version Control" order="5" visible="true" weight="0.15962441" />
+      <window_info active="true" anchor="right" id="Version Control" order="5" visible="true" weight="0.15962441" />
     </layout>
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -327,7 +341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Road.cs" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2FEAF16E-8000-4E0C-ADAE-3F2E05F2A3FA/ee/569ba9bb/Debug.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="769">
@@ -368,7 +381,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Driver.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
+        <state relative-caret-position="208">
           <caret line="23" column="71" selection-start-line="22" selection-start-column="8" selection-end-line="23" selection-end-column="71" />
           <folding>
             <marker date="1610234483578" expanded="false" signature="6:123" ph="..." />
@@ -380,48 +393,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Terrain-Runner/Packages/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Road.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Circuit.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="67">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
           <folding>
-            <marker date="1610573214255" expanded="false" signature="6:92" ph="..." />
-            <marker date="1610573214255" expanded="true" signature="130:876" ph="{...}" />
-            <marker date="1610573214255" expanded="true" signature="227:266" ph="{...}" />
-            <marker date="1610573214255" expanded="true" signature="307:345" ph="{...}" />
-            <marker date="1610573214255" expanded="true" signature="381:874" ph="{...}" />
-            <marker date="1610573214255" expanded="true" signature="452:868" ph="{...}" />
-            <marker date="1610573214255" expanded="true" signature="581:773" ph="{...}" />
+            <marker date="1611173055754" expanded="false" signature="6:92" ph="..." />
+            <marker date="1611173055754" expanded="true" signature="130:943" ph="{...}" />
+            <marker date="1611173055754" expanded="true" signature="294:333" ph="{...}" />
+            <marker date="1611173055754" expanded="true" signature="374:412" ph="{...}" />
+            <marker date="1611173055754" expanded="false" signature="448:941" ph="{...}" />
+            <marker date="1611173055754" expanded="true" signature="519:935" ph="{...}" />
+            <marker date="1611173055754" expanded="true" signature="648:840" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../ML/2.0/trainer_config.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="403">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/AiDriver.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
+        <state relative-caret-position="149">
+          <caret line="79" column="52" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
           <folding>
-            <marker date="1611001151438" expanded="true" signature="6:229" ph="..." />
-            <marker date="1611001151438" expanded="true" signature="260:5178" ph="{...}" />
-            <marker date="1611001151438" expanded="true" signature="454:520" ph="/* private string _vehicle = &quot;Vehicle&quot;; ... */" />
-            <marker date="1611001151438" expanded="true" signature="845:1084" ph="{...}" />
-            <marker date="1611001151438" expanded="true" signature="1123:1280" ph="{...}" />
-            <marker date="1611001151438" expanded="true" signature="1323:1863" ph="{...}" />
-            <marker date="1611001151438" expanded="true" signature="1890:2009" ph="{...}" />
-            <marker date="1611001151438" expanded="true" signature="2015:2432" ph="/// Called when an action is received from player input or the neural network ... " />
-            <marker date="1611001151438" expanded="true" signature="2496:2581" ph="{...}" />
-            <marker date="1611001151438" expanded="true" signature="2637:2944" ph="{...}" />
-            <marker date="1611001151438" expanded="true" signature="3011:4238" ph="{...}" />
-            <marker date="1611001151438" expanded="true" signature="4277:4505" ph="{...}" />
-            <marker date="1611001151438" expanded="true" signature="4561:4640" ph="{...}" />
-            <marker date="1611001151438" expanded="true" signature="4689:5176" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="6:229" ph="..." />
+            <marker date="1611187222503" expanded="true" signature="260:7192" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="454:520" ph="/* private string _vehicle = &quot;Vehicle&quot;; ... */" />
+            <marker date="1611187222503" expanded="true" signature="1136:1375" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="1414:1660" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="1703:2296" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="2324:2627" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="2395:2621" ph="/* if (circuit.indexes.Contains(_index)) FindRandomIndex(); ... */" />
+            <marker date="1611187222503" expanded="true" signature="2654:2773" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="2779:3196" ph="/// Called when an action is received from player input or the neural network ... " />
+            <marker date="1611187222503" expanded="true" signature="3260:3345" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="3401:3708" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="3775:5683" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="4484:5166" ph="/* if (increment &gt; 0) //moving forward ... */" />
+            <marker date="1611187222503" expanded="true" signature="5722:5950" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="5990:6282" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="6338:6417" ph="{...}" />
+            <marker date="1611187222503" expanded="true" signature="6466:7190" ph="{...}" />
           </folding>
         </state>
       </provider>

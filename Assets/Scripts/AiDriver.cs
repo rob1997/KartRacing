@@ -27,8 +27,15 @@ public class AiDriver : Agent
 
     //distance to target in previous frame
     private float _previousDistance;
+    //least distance left to target
+    private float _leastDistance;
     //distance to target in current frame
     private float _currentDistance;
+    
+    //angle between vehicle's forward & target's forward in previous frame
+    private float _previousAngle;
+    //angle between vehicle's forward & target's forward in current frame
+    private float _currentAngle;
 
     private InputMaster _inputMaster;
 
@@ -50,6 +57,10 @@ public class AiDriver : Agent
         _target = circuit.waypoints[_index].position;
 
         _previousDistance = CalculateDistance();
+
+        _leastDistance = _previousDistance;
+
+        _previousAngle = CalculateAngle();
     }
 
     public override void OnEpisodeBegin()
@@ -57,7 +68,7 @@ public class AiDriver : Agent
         _motor.rBody.velocity = Vector3.zero;
         _motor.rBody.angularVelocity = Vector3.zero;
 
-        _index = Random.Range(0, circuit.waypoints.Count - 1);
+        FindRandomIndex();
         
         //get random entry
         Transform entry = circuit.waypoints[_index];
@@ -69,6 +80,24 @@ public class AiDriver : Agent
         _target = circuit.waypoints[++_index].position;
         
         _previousDistance = CalculateDistance();
+
+        _leastDistance = _previousDistance;
+
+        _previousAngle = CalculateAngle();
+    }
+
+    void FindRandomIndex()
+    {
+        _index = Random.Range(0, circuit.waypoints.Count - 1);
+
+//        if (circuit.indexes.Contains(_index)) FindRandomIndex();
+//
+//        else
+//        {
+//            circuit.indexes.Add(_index);
+//
+//            if (circuit.indexes.Count >= 10) circuit.indexes.Clear();
+//        }
     }
 
     private void Update()
@@ -107,6 +136,8 @@ public class AiDriver : Agent
         //calculate distance in previous frame
         _currentDistance = CalculateDistance();
         
+        _currentAngle = CalculateAngle();
+        
         //position if _target with respect to vehicle (localized)
         Vector3 localTarget = _motor.rBody.transform.InverseTransformPoint(_target);
 
@@ -116,16 +147,44 @@ public class AiDriver : Agent
         //1 observation
         sensor.AddObservation(_currentDistance);
 
-        //add reward if vehicle is closer to checkpoint and punish if further
-        AddReward(_previousDistance - _currentDistance);
+        //1 Observation
+        sensor.AddObservation((_currentAngle));
+        
+        float increment = _previousDistance - _currentDistance;
+        
+        float deviation = Mathf.Abs(_previousAngle) - Mathf.Abs(_currentAngle);
+        
+//        if (increment > 0) //moving forward
+//        {
+//            if (_currentDistance < _leastDistance)
+//            {
+//                //add reward if vehicle is closer to checkpoint than ever
+//                AddReward(increment);
+//
+//                _leastDistance = _currentDistance;
+//            }
+//
+//            else //getting closer to checkpoint but not closer than ever
+//            {
+//                
+//            }
+//        }
+//        
+//        else if (increment < 0) //moving backward
+//        {
+//            AddReward(deviation);
+//        }
+//
+//        else //increment == 0 //stationary
+//        {
+//            AddReward(-.05f);
+//        }
+
+        AddReward(increment + deviation);
 
         _previousDistance = _currentDistance;
         
-        //angle between forward of checkpoint and forward of vehicle
-        float angle = Vector3.Angle(_motor.rBody.transform.forward, circuit.waypoints[_index].forward);
-        
-        //1 Observation
-        sensor.AddObservation(angle);
+        _previousAngle = _currentAngle;
         
         Vector3 localVelocity = transform.InverseTransformDirection(_motor.rBody.velocity);
         
@@ -150,6 +209,17 @@ public class AiDriver : Agent
         return Vector3.Distance(targetXZ, positionXZ);   
     }
     
+    private float CalculateAngle()
+    {
+        Vector3 targetForwardXZ = circuit.waypoints[_index].forward;
+        targetForwardXZ.y = 0;
+
+        Vector3 positionForwardXZ = _motor.rBody.transform.forward;
+        positionForwardXZ.y = 0;
+        
+        return Vector3.Angle(targetForwardXZ, positionForwardXZ);   
+    }
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider.CompareTag(_boundary)) AddReward(-.5f);
@@ -171,5 +241,14 @@ public class AiDriver : Agent
         _previousDistance = distance + (_previousDistance - _currentDistance);
         
         _currentDistance = distance;
+
+        _leastDistance = _currentDistance;
+        
+        //recalculate _currentAngle
+        float angle = CalculateAngle();
+
+        _previousAngle = angle + (_previousAngle - _currentAngle);
+        
+        _currentAngle = angle;
     }
 }

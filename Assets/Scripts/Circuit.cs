@@ -7,6 +7,8 @@ public class Circuit : MonoBehaviour
 {
     public List<Transform> waypoints = new List<Transform>();
 
+    [HideInInspector] public List<int> indexes = new List<int>();
+
     private void OnDrawGizmos()
     {
         DrawGizmos(false);
