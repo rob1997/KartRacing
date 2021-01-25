@@ -14,6 +14,8 @@
             <e p="InputMaster.cs" t="Include" />
           </e>
           <e p="Motor.cs" t="Include" />
+          <e p="Road.cs" t="Include" />
+          <e p="TrackGenerator.cs" t="Include" />
         </e>
       </e>
       <e p="KartRacing.sln" t="IncludeFlat" />

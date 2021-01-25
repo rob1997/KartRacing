@@ -18,7 +18,7 @@ public class AiDriver : Agent
     //index of current target/checkpoint/wayPoint
     private int _index;
     
-//    private string _vehicle = "Vehicle";
+    private string _vehicle = "Vehicle";
     
     //boundary tag
     private string _boundary = "Boundary";
@@ -90,14 +90,14 @@ public class AiDriver : Agent
     {
         _index = Random.Range(0, circuit.waypoints.Count - 1);
 
-//        if (circuit.indexes.Contains(_index)) FindRandomIndex();
-//
-//        else
-//        {
-//            circuit.indexes.Add(_index);
-//
-//            if (circuit.indexes.Count >= 10) circuit.indexes.Clear();
-//        }
+        if (circuit.indexes.Contains(_index)) FindRandomIndex();
+
+        else
+        {
+            circuit.indexes.Add(_index);
+
+            if (circuit.indexes.Count >= 10) circuit.indexes.Clear();
+        }
     }
 
     private void Update()
@@ -222,7 +222,7 @@ public class AiDriver : Agent
     
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.CompareTag(_boundary)) AddReward(-.5f);
+        if (other.collider.CompareTag(_boundary) || other.collider.CompareTag(_vehicle)) AddReward(-.5f);
     }
 
     private void OnTriggerEnter(Collider other)

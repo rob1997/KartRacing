@@ -194,6 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 624497895645086177}
+  - component: {fileID: -5129297056394926723}
   m_Layer: 0
   m_Name: LRoad_R
   m_TagString: Next
@@ -222,6 +223,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+--- !u!114 &-5129297056394926723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624497895645086204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1caaedcc283c0294da3f4fd8ef54cfa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {x: 0, y: -2}
+  joints:
+  - key: 0
+    transform: {fileID: 720926221}
+  - key: 90
+    transform: {fileID: 1455650863}
+  - key: -90
+    transform: {fileID: 575579427}
+  - key: 180
+    transform: {fileID: 130465189}
+  - key: -180
+    transform: {fileID: 1615903425}
+  wayPoints: []
 --- !u!1 &624497896956667244
 GameObject:
   m_ObjectHideFlags: 0

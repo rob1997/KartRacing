@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 19c6da62dc077c84787183ec2ec4c216
+  m_SerializeEntries:
+  - m_GUID: 159b45b8424233746b4bc243ae92650c
+    m_Address: Assets/Prefabs/Roads/URoad_R.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3961c678d1958594495f8efa0b6a39e6
+    m_Address: Assets/Prefabs/Roads/URoad_L.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 45fd6d9f9ea866148b22bbbdb01a12b5
+    m_Address: Assets/Prefabs/Roads/LRoad_R.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 777745c99cbc8ef428d8a35e5493e686
+    m_Address: Assets/Prefabs/Roads/LRoad_L.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d4ad2783cd7e9b6469b5488bee5ad553
+    m_Address: Assets/Prefabs/Roads/IRoad.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 01cf00cf29ba8354580f812fdb031ce7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 54f8a6bfa9864f44b8d539e6914a43e2, type: 2}
+    - {fileID: 11400000, guid: 529f80be55ec56348b2ee058ab6b7ca8, type: 2}
