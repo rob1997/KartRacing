@@ -5680,7 +5680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &489251335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27024,6 +27024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Track_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100591930049603807, guid: a4a31cc2908e1f64a8eeb1f34ba499b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8483186753564384253, guid: a4a31cc2908e1f64a8eeb1f34ba499b0,
         type: 3}

@@ -5,8 +5,9 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.InputSystem;
+using Util;
 
-public class TrackGenerator : MonoBehaviour
+public class TrackGenerator : Singleton<TrackGenerator>
 {
     [System.Serializable]
     public struct RoadObj
@@ -25,6 +26,19 @@ public class TrackGenerator : MonoBehaviour
 
     private void Update()
     {
+        if (Keyboard.current.gKey.wasPressedThisFrame)
+        {
+            if (frontRoad == null)
+            {
+                Generate(Road.JointKey.IRoad);
+            }
+
+            else
+            {
+                Generate(frontRoad.GetNextJoint());
+            }
+        }
+        
         if (Keyboard.current.digit1Key.wasPressedThisFrame) Generate(Road.JointKey.IRoad);
         if (Keyboard.current.digit2Key.wasPressedThisFrame) Generate(Road.JointKey.LRoadL);
         if (Keyboard.current.digit3Key.wasPressedThisFrame) Generate(Road.JointKey.LRoadR);
@@ -37,7 +51,11 @@ public class TrackGenerator : MonoBehaviour
         GameObject obj = Instantiate(roads.Find(r => r.key == jointKey).obj, 
             frontRoad != null ? frontRoad.joints.First(j => j.key == jointKey).transform : transform);
 
-        frontRoad = obj.GetComponent<Road>();
+        Road road = obj.GetComponent<Road>();
+
+        road.backRoad = frontRoad;
+
+        frontRoad = road;
         
         obj.transform.SetParent(transform);
 

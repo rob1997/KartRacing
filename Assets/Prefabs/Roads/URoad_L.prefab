@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1caaedcc283c0294da3f4fd8ef54cfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exit: {fileID: 386566911429955235}
+  key: 180
   unit: {x: 0, y: 3}
   joints:
   - key: 0
@@ -63,6 +65,7 @@ MonoBehaviour:
     transform: {fileID: 5697124779248675289}
   - key: -180
     transform: {fileID: 5031583710843311574}
+  backRoad: {fileID: 0}
   wayPoints: []
 --- !u!1 &995714536146310547
 GameObject:
@@ -2966,7 +2969,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2253095966157770400}
   m_LocalRotation: {x: -0.00000011920929, y: -0.7071089, z: 0.70710474, w: -0.000000029802322}
-  m_LocalPosition: {x: -17.5, y: 0, z: -0.000059127808}
+  m_LocalPosition: {x: -17.5, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 990974884026760913}

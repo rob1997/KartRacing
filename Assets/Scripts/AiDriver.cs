@@ -222,7 +222,7 @@ public class AiDriver : Agent
     
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.CompareTag(_boundary) || other.collider.CompareTag(_vehicle)) AddReward(-.5f);
+        if (other.collider.CompareTag(_boundary)) AddReward(-.5f);
     }
 
     private void OnTriggerEnter(Collider other)

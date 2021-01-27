@@ -31,64 +31,6 @@ Transform:
   m_Father: {fileID: 8797015408149329993}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &361006003936450930
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4660797162814082810}
-  - component: {fileID: 5392218801832223631}
-  m_Layer: 0
-  m_Name: RaysBackVehicle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4660797162814082810
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361006003936450930}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029504295}
-  m_LocalPosition: {x: 0, y: 0.75, z: -1.55}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1747144365922617013}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
---- !u!114 &5392218801832223631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361006003936450930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SensorName: RaysBackVehicle
-  m_DetectableTags:
-  - Vehicle
-  m_RaysPerDirection: 5
-  m_MaxRayDegrees: 90
-  m_SphereCastRadius: 0
-  m_RayLength: 1.5
-  m_RayLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967291
-  m_ObservationStacks: 1
-  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
-  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  m_StartVerticalOffset: 0
-  m_EndVerticalOffset: 0
 --- !u!1 &1649891316073974228
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,8 +102,6 @@ Transform:
   - {fileID: 8797015408782896704}
   - {fileID: 8797015408514101484}
   - {fileID: 8797015409359088419}
-  - {fileID: 3437122276455535397}
-  - {fileID: 4660797162814082810}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -394,64 +334,6 @@ Transform:
   m_Father: {fileID: 8797015408149329993}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6618990051808986235
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3437122276455535397}
-  - component: {fileID: 8173581431694766027}
-  m_Layer: 0
-  m_Name: RaysFrontVehicle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3437122276455535397
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6618990051808986235}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 2.15}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1747144365922617013}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8173581431694766027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6618990051808986235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SensorName: RaysFrontVehicle
-  m_DetectableTags:
-  - Vehicle
-  m_RaysPerDirection: 5
-  m_MaxRayDegrees: 90
-  m_SphereCastRadius: 0
-  m_RayLength: 1.5
-  m_RayLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967291
-  m_ObservationStacks: 1
-  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
-  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  m_StartVerticalOffset: 0
-  m_EndVerticalOffset: 0
 --- !u!1 &7950736060923724384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,6 +917,7 @@ MonoBehaviour:
   m_SensorName: RaysFrontBoundary
   m_DetectableTags:
   - Boundary
+  - Vehicle
   m_RaysPerDirection: 5
   m_MaxRayDegrees: 90
   m_SphereCastRadius: 0
@@ -1319,6 +1202,7 @@ MonoBehaviour:
   m_SensorName: RaysBackBoundary
   m_DetectableTags:
   - Boundary
+  - Vehicle
   m_RaysPerDirection: 5
   m_MaxRayDegrees: 90
   m_SphereCastRadius: 0
