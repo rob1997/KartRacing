@@ -57,6 +57,8 @@ public class Road : MonoBehaviour
 
     private const float UnitThreshold = 10f;
 
+    public List<JointKey> exceptions = new List<JointKey>();
+    
     private void Start()
     {
         _exitPosition = exit.position;
@@ -103,6 +105,8 @@ public class Road : MonoBehaviour
 
         if ((_forwardCast && _forwardDistance < UnitThreshold) || (_forwardCast && _leftCast && _rightCast))
         {
+            backRoad.exceptions.Add(key);
+            
             TrackGenerator.Instance.frontRoad = backRoad;
             TrackGenerator.Instance.Generate(TrackGenerator.Instance.frontRoad.GetNextJoint());
             
@@ -136,8 +140,34 @@ public class Road : MonoBehaviour
             possibleJoints.Add(JointKey.URoadL);
         }
 
-        JointKey nextJoint = possibleJoints[Random.Range(0, possibleJoints.Count - 1)];
+        foreach (JointKey k in exceptions)
+        {
+            if (possibleJoints.Contains(k))
+            {
+                possibleJoints.Remove(k);
+            }
+        }
+
+        try
+        {
+            JointKey nextJoint = possibleJoints[Random.Range(0, possibleJoints.Count - 1)];
+            
+            return nextJoint;
+        }
         
-        return nextJoint;
+        catch (Exception e)
+        {
+            if (possibleJoints.Count == 0)
+            {
+                backRoad.exceptions.Add(key);
+            
+                TrackGenerator.Instance.frontRoad = backRoad;
+                TrackGenerator.Instance.Generate(TrackGenerator.Instance.frontRoad.GetNextJoint());
+            
+                Destroy(gameObject);
+            }
+            
+            throw;
+        }
     }
 }
