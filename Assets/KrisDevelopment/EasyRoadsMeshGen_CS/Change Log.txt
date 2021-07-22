@@ -1,0 +1,135 @@
+Change Log v0.1.1:
+-Added option for mesh collider generation.
+
+Change Log v0.1.2:
+Interface Update:
+-added different mesh update modes (including realtime mesh update)
+-improved look and organised variables
+
+Functionality Update:
+-curved mesh based on relative points position
+(you no longer need to worry about point rotation)
+-points scaling (scale the points to change the width of the mesh)
+-gizmos scaling feature
+
+Example Scenes Update:
+-updated example scene to showcase river creation.
+
+Textures Update:
+-added a free water texture and material to the package
+
+Change Log v0.1.9:
+Performance:
+-real time update mode optimization for better performance (update rate reduced).
+
+Functionality:
+-reparent points function (script automatically reparents points).
+-delete points feature.
+-Mesh subdivision.
+-different UV modes.
+Bug Fixes:
+-Fixed Crashes.
+
+Change Log v0.2:
+Functionality:
+-New UV set (Stretch Single Texture)
+-Snap Points To Position feature (SnapPoint.js)
+Package:
+-Crossroad model + Prefab
+-New Textures (Sidewalk_Texture_Seamless,Sidewalk_Uv,Asphalt_Seamless)
+-Resources folder renamed to ER_Resources (To avoid bugs inside Unity)
+Fixes:
+-Fixed subdivision.
+
+Change Log v0.2.2:
+-Added Border Mesh. (UV options for border mesh will be added in version v0.3)
+-Fixed "Mesh.Clear();" problem.
+
+Change Log v0.2.3
+-Fixed "leftRightb" problem.
+-(UV options for border mesh will be added in version v0.3)
+
+Change Log v0.2.4
+-Free positioning* of the parent object is now allowed. Any know bugs associated with it are now fixed.
+*(you can manipulate the position freely of the parent object, which means that it is not fixed in poistion (0,0,0), however the rotation should still remain neutral.)
+
+Change Log v0.2.5
+-Fixed issue where borders didn't scale accordingly
+
+Change Log v0.2.5.1
+-Updated Debug.Error to Debug.LogError to avoid console errors with Unity 5.5.1
+
+Change Log v0.2.5.2
+-"lBorderNavPoints" error fixed.
+
+Change Log v0.3
+Fixes:
+-fixed "Width-to-length" UV option.
+-fixed border mesh collider
+Changes:
+-changed "Width-to-length" UV option name to "Match width"
+Improvements:
+-Improved Nav Point inspector
+Added Features:
+-Built-in tutorial inside the MeshGen component.
+-Border Mesh UV options
+
+Change Log v0.4
+- Improved Gizmos
+- Improved workflow: Automatically selecting the latest nav point created.
+- Fixed world position issue.
+
+Change Log v0.5
+-Improved Gizmos
+-Improved performance
+-Optimized editor scripts
+-Added new Update mode option - "Automatic" which vastly improves performance in the scene view
+
+Change Log v2018
+- Package ported to C# for compatibility with Unity 2017.2
+- GUI improvements
+- Code clean-up
+- Serialization improvements
+- partial Undo/Redo functionality
+- Added ER Helper script to help with re-assignment of nav points (for easier transfer to the C# version)
+
+Change Log v2018.1
+- Build hotfix (fixed UnityEditor compilation issue)
+
+Change Log v2018.2
+- Added "Lock Width" feature for Nav Points
+
+Change Log v2018.3
+- Added utility functions for retrieving point data from the generated path
+
+Change Log v2019
+-Fixed Build error
+-SETUtil 1.38 integration
+-Major code optimization
+-Improved editor performance
+-Improved automatic point control
+-Added Array Extension
+-Added ER Path Tracer
+-Added Type ERMG.OrientationData
+-Added Type ERMG.PointData (extends OrientationData)
+-Added method "GetOrientedPathPoints()" to MeshGen (with return type ERMG.OrientationData[])
+-Added MenuItem "GameObject/3D Object/ER Mesh Gen" for quick object creation
+-Added runtime compatibility
+-Added OBJ Export option (Experimental)
+-Removed "Parent Points" because of its volitale nature
+-Improved "Finalize" option
+
+Change Log v2019.1
+-Fixed scene button Add Action delegate handling
+
+Change Log v2019.8
+-SETUtil 1.42.4 integration
+-Improved editor performance
+-Added rotation option to arrays
+
+Change Log v2020.1
+-SETUtil 1.48
+-Fixed Array missing reference after removal
+-Performance optimizations (fixed array objects performance drop)
+-Added UV scale option for borders
+-Added Terrain Morphing!

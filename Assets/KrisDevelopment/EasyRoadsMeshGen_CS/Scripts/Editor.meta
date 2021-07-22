@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: dc285f8c035b32f449d4a6128af034b8
+labels:
+- Prop
+- Road
+- Water
+folderAsset: yes
+timeCreated: 1440619282
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: easy roads mesh gen
+  assetBundleVariant: mg
