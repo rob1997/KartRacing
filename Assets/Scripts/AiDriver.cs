@@ -70,7 +70,7 @@ public class AiDriver : Agent
         sensor.AddObservation(roadGenerator.CalculateDistance());
 
         //add reward if vehicle is closer to checkpoint and punish if further
-        AddReward(roadGenerator.DistanceDelta);
+        if (roadGenerator.DistanceDelta > 0) AddReward(roadGenerator.DistanceDelta);
         
         //1 Observation
         sensor.AddObservation(roadGenerator.CalculateAngle());
