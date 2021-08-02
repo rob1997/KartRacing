@@ -26,11 +26,22 @@ public class RoadGenerator : MonoBehaviour
     
     private float _currentAngle;
     private float _previousAngle;
+    
+    private float _currentDistanceFromMidRoad;
+    private float _previousDistanceFromMidRoad;
 
     public Vector3 Target => meshGen.navPoints[3].position;
+    public Vector3 TargetForward => meshGen.navPoints[4].position - Target;
+    public float RoadHalfWidth => meshGen.deltaWidth / 2f;
+    public Vector3 RoadForward => Target - meshGen.navPoints[2].position;
     
     public float DistanceDelta { get; private set; }
+    
     public float AngleDelta { get; private set; }
+    
+    public float DistanceFromMidRoadDelta { get; private set; }
+
+    public float OffRoad => CalculateDistanceFromMidRoad() - RoadHalfWidth;
     
     //boundary tag
     private string _boundary = "Boundary";
@@ -61,14 +72,18 @@ public class RoadGenerator : MonoBehaviour
 
         _currentAngle = CalculateAngle();
         _previousAngle = _currentAngle;
+
+        _currentDistanceFromMidRoad = CalculateDistanceFromMidRoad();
+        _previousDistanceFromMidRoad = _currentDistanceFromMidRoad;
     }
     
     public void InstantiateVehicle()
     {
         vehicleTransform.position = meshGen.navPoints[2].position;
-        vehicleTransform.rotation = Quaternion.LookRotation(meshGen.navPoints[2].forward);
+//        vehicleTransform.rotation = Quaternion.LookRotation(RoadForward);
+        vehicleTransform.rotation = Quaternion.LookRotation(RoadForward) * Quaternion.Euler(0, Random.Range(0, 360f), 0);
     }
-    
+
     public void Generate()
     {
 //        vehicleTransform.position += ((meshGen.navPoints[3].position - vehicleTransform.position).normalized * .05f);
@@ -76,7 +91,7 @@ public class RoadGenerator : MonoBehaviour
 //        vehicleTransform.rotation = Quaternion.Lerp(vehicleTransform.rotation, 
 //            Quaternion.LookRotation((meshGen.navPoints[3].position - vehicleTransform.position).normalized), .05f);
         
-        if (_currentDistance < meshGen.deltaWidth / 2f)
+        if (_currentDistance < RoadHalfWidth)
         {
             AddNavPoint(true);
             
@@ -85,6 +100,8 @@ public class RoadGenerator : MonoBehaviour
             _previousDistance = CalculateDistance();
 
             _previousAngle = CalculateAngle();
+
+            _previousDistanceFromMidRoad = CalculateDistanceFromMidRoad();
             
             AddBackCollider();
         }
@@ -100,6 +117,12 @@ public class RoadGenerator : MonoBehaviour
         AngleDelta = _previousAngle - _currentAngle;
         
         _previousAngle = _currentAngle;
+
+        _currentDistanceFromMidRoad = CalculateDistanceFromMidRoad();
+
+        DistanceFromMidRoadDelta = _previousDistanceFromMidRoad - _currentDistanceFromMidRoad;
+
+        _previousDistanceFromMidRoad = _currentDistanceFromMidRoad;
     }
 
     public float CalculateDistance()
@@ -115,18 +138,40 @@ public class RoadGenerator : MonoBehaviour
     
     public float CalculateAngle()
     {
-        Vector3 vehiclePositionXz = vehicleTransform.position;
-        vehiclePositionXz.y = 0;
-        
-        Vector3 vehicleForwardXz = vehicleTransform.forward;
-        vehicleForwardXz.y = 0;
+        Vector3 vehicleForward = vehicleTransform.forward;
+        vehicleForward.y = 0;
 
-        Vector3 targetXz = Target;
-        targetXz.y = 0;
-        
-        return Vector3.Angle(vehicleForwardXz, targetXz - vehiclePositionXz);
+        Vector3 directionToTarget = Target - vehicleTransform.position;
+        directionToTarget.y = 0;
+
+        return Vector3.SignedAngle(vehicleForward, directionToTarget, Vector3.up);
     }
-    
+
+    public float CalculateDistanceFromMidRoad()
+    {
+        Vector3 previousTarget = meshGen.navPoints[2].position;
+        Vector3 vehiclePosition = vehicleTransform.position;
+        
+        Vector3 roadForward = Target - previousTarget;
+        roadForward.y = 0;
+
+        Vector3 directionToVehicle = vehiclePosition - previousTarget;
+        directionToVehicle.y = 0;
+
+        float angleFromMidRoad = Vector3.Angle(roadForward, directionToVehicle);
+        
+        previousTarget.y = 0;
+        vehiclePosition.y = 0;
+        float distanceToVehicle = Vector3.Distance(previousTarget, vehiclePosition);
+
+        return distanceToVehicle * Mathf.Sin(angleFromMidRoad * Mathf.Deg2Rad);
+    }
+
+    public float CalculateNextTargetAngle()
+    {
+        return Vector3.SignedAngle(RoadForward, TargetForward, Vector3.up);
+    }
+
     public void AddNavPoint(bool front)
     {
         int count = meshGen.navPoints.Count;

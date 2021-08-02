@@ -53,6 +53,18 @@ public class AiDriver : Agent
         float[] vectorAction = buffers.ContinuousActions.Array;
         
         _motor.Drive(vectorAction[0], vectorAction[1], vectorAction[2]);
+        
+        float speed = Vector3.Dot(roadGenerator.RoadForward, _motor.rBody.velocity);
+
+        if (speed > 0)
+        {
+            AddReward(speed * .1f);
+        }
+
+        else if (speed < 0)
+        {
+            AddReward(roadGenerator.AngleDelta);
+        }
     }
     
     public override void CollectObservations(VectorSensor sensor)
@@ -70,28 +82,36 @@ public class AiDriver : Agent
         sensor.AddObservation(roadGenerator.CalculateDistance());
 
         //add reward if vehicle is closer to checkpoint and punish if further
-        if (roadGenerator.DistanceDelta > 0) AddReward(roadGenerator.DistanceDelta);
+        //if (roadGenerator.DistanceDelta > 0) AddReward(roadGenerator.DistanceDelta);
+
+        //1 Observation
+        sensor.AddObservation(roadGenerator.CalculateAngle() / 180f);
         
         //1 Observation
-        sensor.AddObservation(roadGenerator.CalculateAngle());
+        sensor.AddObservation(roadGenerator.CalculateNextTargetAngle() / 45f);
+        
+        //1 Observation
+        sensor.AddObservation(roadGenerator.CalculateDistanceFromMidRoad());
         
         //1 Observation
         sensor.AddObservation(Mathf.Sign(_motor.rBody.velocity.magnitude)); //is going forward/backward
 
         Vector3 localVelocity = transform.InverseTransformDirection(_motor.rBody.velocity);
         
-        //1 observation
-        sensor.AddObservation(localVelocity.x);
-            
-        //1 observation
-        sensor.AddObservation(localVelocity.z);
+        //3 observation
+        sensor.AddObservation(localVelocity);
             
         //4 observations
-        sensor.AddObservation(transform.localRotation.normalized);
+        //sensor.AddObservation(transform.localRotation.normalized);
     }
     
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.CompareTag(_boundary)) AddReward(-.5f);
+        if (other.collider.CompareTag(_boundary)) AddReward(-.2f);
+    }
+    
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.collider.CompareTag(_boundary)) AddReward(-.2f);
     }
 }
