@@ -9,6 +9,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
+
+//TODO: remove back collider implementation with -ve reward for back movement
+//TODO: remove boundaries with -ve reward for straying off road
+//TODO: remove raycasts
 public class AiDriver : Agent
 {
     public RoadGenerator roadGenerator;
@@ -58,12 +62,25 @@ public class AiDriver : Agent
 
         if (speed > 0)
         {
-            AddReward(speed * .1f);
+            //is it facing the road while moving in it's direction
+            //the more it faces the road the more rewarded it gets
+            float normalizedAlignment = 1f - Vector3.Angle(roadGenerator.RoadForward, _motor.rBody.transform.forward) / 180f;
+            AddReward((speed * (1f + normalizedAlignment)) * .1f);
         }
 
         else if (speed < 0)
         {
             AddReward(roadGenerator.AngleDelta);
+        }
+        
+        //how further is vehicle from mid road, -ve if outside road
+        float normalizedDistanceFromMidRoad =
+            1f - (roadGenerator.CalculateDistanceFromMidRoad() / roadGenerator.RoadHalfWidth);
+        //punish agent if outside of road
+        if (normalizedDistanceFromMidRoad < 0)
+        {
+            //AddReward(normalizedDistanceFromMidRoad * .1f);
+            //AddReward(roadGenerator.DistanceFromMidRoadDelta);
         }
     }
     
@@ -92,6 +109,8 @@ public class AiDriver : Agent
         
         //1 Observation
         sensor.AddObservation(roadGenerator.CalculateDistanceFromMidRoad());
+        //how further is vehicle from mid road, -ve if outside road
+        //sensor.AddObservation(1f - (roadGenerator.CalculateDistanceFromMidRoad() / roadGenerator.RoadHalfWidth));
         
         //1 Observation
         sensor.AddObservation(Mathf.Sign(_motor.rBody.velocity.magnitude)); //is going forward/backward
